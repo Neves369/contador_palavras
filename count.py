@@ -21,7 +21,7 @@ def print_top(filename):
   # Utilizamos a função "get_count()" para auxiliar a extrair o valor de 'count'
   items = sorted(word_count.items(), key=get_count, reverse=True)
 
-  # Imprimimos apenas os 20 primeiros resultados
+  # Imprime apenas os 20 primeiros resultados
   for item in items[:20]:
     print (item[0], item[1])
 
@@ -37,7 +37,7 @@ def word_count_dict(filename):
     # percorrer cada palavra da linha...
     for word in words:
       word = word.lower()
-      # Caso espcial se nos estivermos vendo esta palavra pela primeira vez.
+      # ...se nos estivermos vendo esta palavra pela primeira vez.
       if not word in word_count:
         word_count[word] = 1
       else:
